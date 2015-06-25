@@ -8,7 +8,7 @@ import java.io.StringWriter;
 /**
  * Created by Rasheed on 2015-06-25.
  */
-public class MarshallUtil {
+public class MarshallingUtil {
 
     public static String asString(JAXBContext pContext, Object pObject) throws JAXBException {
         StringWriter sw = new StringWriter();

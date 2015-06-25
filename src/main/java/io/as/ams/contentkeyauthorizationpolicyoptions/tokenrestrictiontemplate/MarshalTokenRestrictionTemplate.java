@@ -1,7 +1,7 @@
 package io.as.ams.contentkeyauthorizationpolicyoptions.tokenrestrictiontemplate;
 
 import io.as.ams.contentkeyauthorizationpolicyoptions.key.SymmetricKey;
-import io.as.ams.contentkeyauthorizationpolicyoptions.util.MarshallUtil;
+import io.as.ams.contentkeyauthorizationpolicyoptions.util.MarshallingUtil;
 import io.as.ams.contentkeyauthorizationpolicyoptions.util.XmlPrettyPrinter;
 
 import javax.xml.bind.JAXBContext;
@@ -9,9 +9,9 @@ import javax.xml.bind.JAXBContext;
 /**
  * Created by Rasheed on 2015-06-25.
  */
-public class MarshallTokenRestrictionTemplate {
+public class MarshalTokenRestrictionTemplate {
 
-    public static void marshall() throws Exception {
+    public static void marshal() throws Exception {
         final TokenRestrictionTemplate tokenRestrictionTemplate = new TokenRestrictionTemplate();
         tokenRestrictionTemplate.setAudience("urn:test");
         tokenRestrictionTemplate.setIssuer("http://testacs.com/");
@@ -38,7 +38,7 @@ public class MarshallTokenRestrictionTemplate {
         tokenRestrictionTemplate.setRequiredClaims(new ObjectFactory().createArrayOfTokenClaim(arrayOfTokenClaim));
 
         JAXBContext jaxbContext = JAXBContext.newInstance(TokenRestrictionTemplate.class);
-        String tokenRestrictionTemplateAsString = MarshallUtil.asString(jaxbContext, new ObjectFactory().createTokenRestrictionTemplate((tokenRestrictionTemplate)));
+        String tokenRestrictionTemplateAsString = MarshallingUtil.asString(jaxbContext, new ObjectFactory().createTokenRestrictionTemplate((tokenRestrictionTemplate)));
 
         System.out.println(XmlPrettyPrinter.format(tokenRestrictionTemplateAsString));
     }

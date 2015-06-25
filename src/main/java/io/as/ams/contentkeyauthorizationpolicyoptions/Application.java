@@ -1,6 +1,6 @@
 package io.as.ams.contentkeyauthorizationpolicyoptions;
 
-import io.as.ams.contentkeyauthorizationpolicyoptions.tokenrestrictiontemplate.MarshallTokenRestrictionTemplate;
+import io.as.ams.contentkeyauthorizationpolicyoptions.tokenrestrictiontemplate.MarshalTokenRestrictionTemplate;
 
 /**
  * Created by Rasheed on 2015-06-25.
@@ -8,6 +8,6 @@ import io.as.ams.contentkeyauthorizationpolicyoptions.tokenrestrictiontemplate.M
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        MarshallTokenRestrictionTemplate.marshall();
+        MarshalTokenRestrictionTemplate.marshal();
     }
 }
